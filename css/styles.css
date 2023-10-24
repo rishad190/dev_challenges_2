@@ -1,130 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap");
+@import url("https://fonts.google.com/specimen/Poppins");
+@import url("https://fonts.google.com/specimen/Lato");
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #f2f5f9;
+  font-family: "Sora", sans-serif;
+  line-height: 1.5;
+
+  background-position: 0 0, 25px 25px;
+  background-attachment: fixed;
+  background-size: 50px 50px;
+  overflow-x: hidden;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_main {
+  width: 431px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-
+.card_img {
+  width: 100%;
+  position: relative;
 }
-
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+.card_img img {
+  width: 100%;
+  border-radius: 12px;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+.card_img img:last-child {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
 }
-
-.title {
-    position: relative;
-    text-align: center;
+.text_box {
+  margin: 10px 30px 20px 30px;
 }
-
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+.text_box h1 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
 }
+.text_box p {
+  font-size: 16px;
 
-.logo {
-    display: none;
+  font-family: "Lato", sans-serif;
+  color: #677489;
+  margin-top: 20px;
 }
-
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
+.user_card {
+  width: 431px;
+  display: flex;
+  align-items: center;
+  border-top: #d6d8db solid 0.5px;
+  padding: 25px 30px 25px 30px;
 }
-
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
+.user_card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-
-.link-title {
-    font-size: 1.125rem;
+.user_card_text {
+  margin-left: 15px;
 }
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
+.user_card_text h2 {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
-
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
-  }
+.user_card_text p {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  color: #677489;
+}
